@@ -1,0 +1,31 @@
+import { ErrorDefinition, ErrorName } from './types';
+
+export const ERROR_DEFINITIONS: ErrorDefinition[] = [
+  { name: ErrorName.ValidationError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.JsonWebTokenError, statusCode: 401, stackTrace: false },
+  { name: ErrorName.SyntaxError, statusCode: 400, stackTrace: true },
+  { name: ErrorName.ReferenceError, statusCode: 400, stackTrace: true },
+  { name: ErrorName.CastError, statusCode: 400, stackTrace: true },
+  { name: ErrorName.TypeError, statusCode: 400, stackTrace: true },
+  { name: ErrorName.UnknownEndpointError, statusCode: 404, stackTrace: false, json: { error: 'unknown endpoint' } },
+  { name: ErrorName.PermissionDeniedError, statusCode: 403, stackTrace: false },
+  { name: ErrorName.MongoError, statusCode: 400, stackTrace: true },
+  { name: ErrorName.AccessControlError, statusCode: 401, stackTrace: false },
+  { name: ErrorName.UnauthorizedError, statusCode: 401, stackTrace: false },
+  { name: ErrorName.InvalidAccessTokenError, statusCode: 403, stackTrace: false },
+  { name: ErrorName.TokenExpiredError, statusCode: 401, stackTrace: false },
+  { name: ErrorName.SessionExpiredError, statusCode: 419, stackTrace: false },
+  { name: ErrorName.UserNotActivatedError, statusCode: 409, stackTrace: false },
+  { name: ErrorName.NicknameInUseError, statusCode: 409, stackTrace: false, json: { error: 'nickname' } },
+  { name: ErrorName.EmailInUseError, statusCode: 409, stackTrace: false, json: { error: 'email' } },
+  { name: ErrorName.AvatarColorError, statusCode: 409, stackTrace: false, json: { error: 'avatarColor' } },
+  { name: ErrorName.WrongCredentialsError, statusCode: 403, stackTrace: false, json: { error: 'invalid user credentials' } },
+  { name: ErrorName.EmailVerifyRequestNotFoundError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.EmailVerifyRequestNotValidError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.EmailVerifyRequestStatusError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.PasswordRequestNotFoundError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.PasswordRequestNotValidError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.PasswordRequestStatusError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.UsetNotFoundError, statusCode: 400, stackTrace: false },
+  { name: ErrorName.ListingTooNewError, statusCode: 409, stackTrace: false }
+];

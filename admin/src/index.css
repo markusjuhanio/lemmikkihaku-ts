@@ -1,0 +1,37 @@
+html, body, #root {
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+@keyframes makeVisible {
+    to {
+        visibility: visible;
+    }
+}
+
+.delayed {
+    animation: 0s linear 0.5s forwards makeVisible;
+    visibility: hidden;
+}
+
+.MuiDataGrid-cell, .MuiDataGrid-columnHeaderTitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+    outline: none !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+    padding: 15px !important;
+    cursor: pointer;
+}
+
+.MuiDataGrid-root .MuiDataGrid-iconSeparator {
+    display: none !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within {
+    outline: none !important;
+}

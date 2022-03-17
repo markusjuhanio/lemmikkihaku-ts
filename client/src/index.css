@@ -1,0 +1,81 @@
+html, body, #root {
+    height: 100% !important;
+    min-height: 100% !important;
+}
+
+/*
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url('../public/images/paws.png') no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+*/
+
+@keyframes makeVisible {
+    to {
+        visibility: visible;
+    }
+}
+
+.delayed {
+    animation: 0s linear 0.35s forwards makeVisible;
+    visibility: hidden;
+}
+
+.delayed-ad {
+    animation: 0s linear 1s forwards makeVisible;
+    visibility: hidden;
+}
+
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .25em;
+}
+
+.separator-dark {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.separator-dark::before,
+.separator-dark::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #2F2F2F;
+}
+
+.separator-dark:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.separator-dark:not(:empty)::after {
+    margin-left: .25em;
+}
